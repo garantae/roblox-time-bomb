@@ -23,6 +23,7 @@ local HoldAnimation = Instance.new("Animation")
 	
 
 script.Parent.Handle.Touched:Connect(function(hit)
+	
 	if hit.Parent:FindFirstChild("Humanoid") ~= nil and BombEnabled == true and hit.Parent:FindFirstChild("Humanoid").Health > 0 and BombTick.Value > 0 then
 		BombEnabled = false
 		
@@ -50,6 +51,7 @@ end)
 
 --// Function on when the bomb is equipped
 script.Parent.Equipped:Connect(function()
+	
 	IsBombOn = true
 
 	if script.Parent.Parent:FindFirstChild("Humanoid") then
